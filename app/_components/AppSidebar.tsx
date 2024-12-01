@@ -63,12 +63,12 @@ export function AppSidebar() {
   const path = usePathname();
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>();
   useEffect(() => {
-    if (path === "/thankyou") {
+    if (path&&path === "/thankyou") {
       setIsSidebarOpen(false);
     } else {
-      true;
+      setIsSidebarOpen(true);
     }
-  }, []);
+  }, [path]);
 
   if (isSidebarOpen === false) return null;
 
