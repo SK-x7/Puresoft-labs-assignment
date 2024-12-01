@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
-function page() {
+function Page() {
   const [b64str, setB64str] = useState<string | null>(null);
 
   useEffect(() => {
@@ -48,4 +48,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

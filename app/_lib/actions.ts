@@ -10,7 +10,11 @@ export async function getData() {
     const data = JSON.parse(fileData);
     return data;
   } catch (error) {
-    return null;
+    if (error instanceof Error) {
+        throw new Error(`Error fetching API secret: ${error.message}`);
+      } else {
+        throw new Error("Error fetching Data, please try again after sometime.");
+      }
   }
 }
 export async function getApiSecret() {
@@ -20,7 +24,11 @@ export async function getApiSecret() {
     const data = JSON.parse(fileData);
     return data.api_secret;
   } catch (error) {
-    return null;
+    if (error instanceof Error) {
+        throw new Error(`Error fetching API secret: ${error.message}`);
+      } else {
+        throw new Error("Error fetching API secret, please try again after sometime.");
+      }
   }
 }
 
@@ -36,7 +44,11 @@ export async function getImage() {
     const data = res.data;
     return data.base64_string;
   } catch (error) {
-    console.log(error);
-    return null;
+    if (error instanceof Error) {
+        console.log(error.message);
+        return null;
+      } else {
+        return null;
+      }
   }
 }

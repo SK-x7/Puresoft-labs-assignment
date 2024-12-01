@@ -35,7 +35,7 @@ function SelectTimeFrame() {
         <SelectContent className="w-full">
           {SelectTimeFrameItems &&
             SelectTimeFrameItems.map((item) => (
-              <SelectItem value={item.value} className="capitalize">
+              <SelectItem value={item.value} className="capitalize" key={item.value}>
                 {item.name}
               </SelectItem>
             ))}

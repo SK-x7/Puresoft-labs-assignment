@@ -8,10 +8,8 @@ export interface GroupLeaderboardProps {
 }
 
 function GroupsLeaderBoard({
-  name,
   leaderboard,
 }: {
-  name: string;
   leaderboard: GroupLeaderboardProps[];
 }) {
   return (

@@ -9,10 +9,8 @@ export interface LeaderboardProps {
 }
 
 function UserLeaderBoard({
-  name,
   leaderboard,
 }: {
-  name: string;
   leaderboard: LeaderboardProps[];
 }) {
   return (

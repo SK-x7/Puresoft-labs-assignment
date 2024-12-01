@@ -59,11 +59,9 @@ async function page() {
 
         <section className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
           <UserLeaderBoard
-            name="User"
             leaderboard={data?.user_leaderboard}
           ></UserLeaderBoard>
           <GroupsLeaderBoard
-            name="User"
             leaderboard={data?.groups_leaderboard}
           ></GroupsLeaderBoard>
         </section>
