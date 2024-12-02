@@ -36,13 +36,20 @@ function SelectPeople({
         <SelectContent className="w-full">
           <div className="flex flex-col gap-3 px-4 py-2 divide-y-2 text-xs">
             {
-              <div>
+              <div className="flex justify-between items-center w-full">
                 <h1 className="text-base text-gray-600">People :  
                   <span className="text-black ml-1 font-semibold"> 
                     
                   {(!!selectedGroup&&!!selectedUser)?"Multiple Selected": selectedGroup|| selectedUser||"All"}
                   </span>
                   </h1>
+                  <span
+                      className="cursor-pointer text-sm text-gray-600"
+                      onClick={() => {
+                        setSelectedUser(undefined);
+                        setSelectedGroup(undefined);
+                      }}
+                    >Clear</span>
               </div>
             }
             {(selectedGroup || selectedUser) && (
@@ -84,7 +91,21 @@ function SelectPeople({
                     setSelectedGroup(value);
                   }}
                   value={selectedGroup}
+                  
                 >
+                
+                    <div
+                      className="flex items-center space-x-2"
+                    >
+                      <RadioGroupItem
+                        value={"All Groups"}
+                        id={"All"}
+                      />
+                      <Label htmlFor={"All"}>
+                        All Groups
+                      </Label>
+                    </div>
+            
                   {groups.map((group) => (
                     <div
                       className="flex items-center space-x-2"
@@ -111,6 +132,17 @@ function SelectPeople({
                     setSelectedUser(value);
                   }}
                 >
+                  <div
+                      className="flex items-center space-x-2"
+                    >
+                      <RadioGroupItem
+                        value={"All Users"}
+                        id={"All"}
+                      />
+                      <Label htmlFor={"All"}>
+                        All Users
+                      </Label>
+                    </div>
                   {users.map((user) => (
                     <div
                       className="flex items-center space-x-2"
