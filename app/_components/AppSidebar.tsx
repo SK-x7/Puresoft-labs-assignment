@@ -10,6 +10,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  useSidebar,
 } from "@/components/ui/sidebar";
 import {
   Activity,
@@ -62,6 +63,7 @@ const items2 = [
 ];
 export function AppSidebar() {
   const path = usePathname();
+  const {toggleSidebar}=useSidebar();
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>();
   useEffect(() => {
     if (path&&path === "/thankyou") {
@@ -97,7 +99,7 @@ export function AppSidebar() {
             <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.title} className="px-5">
-                  <SidebarMenuButton asChild className={`font-normal rounded-lg text-base py-5 hover:bg-blue-500 hover:text-white ${path===item.url?"text-blue-600 bg-blue-200/50":''}`}>
+                  <SidebarMenuButton asChild className={`font-normal rounded-lg text-base py-5 hover:bg-blue-500 hover:text-white ${path===item.url?"text-blue-600 bg-blue-200/50":''}`} onClick={toggleSidebar}>
                     <Link href={item.url} className="flex gap-4">
                       <item.icon size={36} />
                       {/* <Activity size={36} /> */}
