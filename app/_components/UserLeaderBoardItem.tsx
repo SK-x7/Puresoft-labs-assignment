@@ -9,7 +9,7 @@ function UserLeaderBoardItem({
   return (
     <div className="flex w-full justify-between">
       <div className="flex gap-3">
-        <div className="relative h-8 w-8 rounded-full bg-blue-100">
+        <div className="relative h-9 w-9 rounded-full bg-blue-100">
           <Image
             src={`${leaderboardItem.image}/png`}
             fill
@@ -17,11 +17,11 @@ function UserLeaderBoardItem({
             alt="Tesla Image"
           />
         </div>
-        <div className="flex flex-col text-xs">
-          <span className="font-semibold text-black capitalize">
+        <div className="flex flex-col">
+          <span className="font-semibold text-sm text-black capitalize">
             {leaderboardItem?.name}
           </span>
-          <span className="text-gray-500 capitalize">
+          <span className="text-gray-500 capitalize text-xs">
             {leaderboardItem.points} Points -{" "}
             {leaderboardItem.accuracy_percentage}% Correct
           </span>
@@ -29,7 +29,7 @@ function UserLeaderBoardItem({
       </div>
 
       <div className="flex justify-center items-center gap-3 text-sm">
-        <span>
+        <span className="font-bold">
           {leaderboardItem?.accuracy_percentage -
             leaderboardItem?.previous_accuracy_percentage}
         </span>

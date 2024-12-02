@@ -10,7 +10,7 @@ import {
 
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { X } from "lucide-react";
+import { Search, X } from "lucide-react";
 import { GroupLeaderboardProps } from "./GroupsLeaderBoard";
 import { LeaderboardProps } from "./UserLeaderBoard";
 
@@ -34,7 +34,7 @@ function SelectPeople({
           <SelectValue placeholder="People" />
         </SelectTrigger>
         <SelectContent className="w-full">
-          <div className="flex flex-col gap-5 px-4 py-2 divide-y-2 text-xs">
+          <div className="flex flex-col gap-3 px-4 py-2 divide-y-2 text-xs">
             {(selectedGroup || selectedUser) && (
               <div className="flex gap-4">
                 {selectedGroup && (
@@ -61,8 +61,12 @@ function SelectPeople({
                 )}
               </div>
             )}
+            <div className="w-full flex justify-start items-center gap-[2px]">
+              <Search size={20} className="text-gray-500"></Search>
+              <input  placeholder="Search..." className=" w-5/6 text-[16px] px-2 py-[2px] text-gray-500"/>
+            </div>
             {groups && (
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-3 py-3">
                 <span className="text-sm text-gray-700">Groups</span>
 
                 <RadioGroup
@@ -90,7 +94,7 @@ function SelectPeople({
             )}
 
             {users && (
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-3 py-3">
                 <span className="text-sm text-gray-700">Users</span>
                 <RadioGroup
                   onValueChange={(value) => {

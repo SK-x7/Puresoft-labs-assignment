@@ -10,6 +10,16 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  .recharts-wrapper {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    //flex-grow:1;  
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  
+}
+
 }
 
 @layer base {

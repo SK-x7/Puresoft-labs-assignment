@@ -14,9 +14,9 @@ function UserLeaderBoard({
   leaderboard: LeaderboardProps[];
 }) {
   return (
-    <div className="w-full bg-white p-5 rounded-3xl flex flex-col gap-6">
+    <div className="w-full bg-white p-5 rounded-3xl flex flex-col gap-4">
       {/* card */}
-      <h1 className="text-sm text-gray-700">User Leaderboard</h1>
+      <h1 className=" text-gray-700">User Leaderboard</h1>
       <div className="w-full flex flex-col gap-5">
         {leaderboard &&
           leaderboard.map((item) => (

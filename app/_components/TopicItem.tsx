@@ -11,18 +11,18 @@ function TopicItem({
   topic: topicProps;
 }) {
   return (
-    <div className=" flex w-full justify-between gap-2 sm:gap-3">
-      <div className="relative h-6 w-6 md:h-8 md:w-8">
+    <div className=" flex w-full justify-between items-center gap-2 sm:gap-3">
+      <div className="relative h-9 w-9 md:h-8 md:w-10">
         <Image
           src={`${topic?.image}/png`}
           alt={topic?.name}
           fill
-          className=" rounded-full object-cover"
+          className=" rounded-lg object-cover"
         />
       </div>
 
       <div className="flex-1 flex flex-col">
-        <span className="text-xs md:text-base">{topic?.name}</span>
+        <span className="text-sm md:text-base">{topic?.name}</span>
         <div className="flex justify-between items-center  !w-full">
           {topicName === "weakest" ? (
             <div className="w-3/4 sm:w-4/5 lg:w-3/4">
@@ -39,7 +39,7 @@ function TopicItem({
               ></ProgressGreen>
             </div>
           )}
-          <span className="  capitalize !text-xs w-2/5 lg:w-1/4 flex justify-end">
+          <span className="  capitalize text-sm w-2/5 lg:w-1/4 flex justify-end">
             {topic?.correct_percentage}% correct
           </span>
         </div>

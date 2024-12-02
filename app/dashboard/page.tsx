@@ -1,8 +1,10 @@
 import { SidebarTrigger } from "@/components/ui/sidebar";
+import { useIsMobile } from "@/hooks/use-mobile";
 import Barchart from "../_components/Barchart";
 import GroupsLeaderBoard from "../_components/GroupsLeaderBoard";
 import Header from "../_components/Header";
 import Metrics from "../_components/Metrics";
+import Select from "../_components/Select";
 import SelectHeaders from "../_components/SelectHeaders";
 import SelectTimeFrame from "../_components/SelectTimeFrame";
 import Topics, { topicProps } from "../_components/Topics";
@@ -20,10 +22,12 @@ async function page() {
   if (!data) return null;
 
   return (
-    <>
+<>
       <SidebarTrigger></SidebarTrigger>
+    
+    
       <Header></Header>
-      <main className=" flex flex-col gap-4 flex-1">
+      <main className=" flex flex-col gap-4 flex-1 pt-5">
         <section className="grid grid-cols-3 w-full justify-between gap-4">
           <SelectHeaders
             groups_leaderboard={data?.groups_leaderboard}
@@ -31,17 +35,26 @@ async function page() {
           ></SelectHeaders>
         </section>
 
-        <section className=" grid grid-cols-1 grid-rows-2 sm:grid-rows-2 md:grid-rows-1 md:grid-cols-2 gap-5 min-[420px]:gap-3 sm:gap-4 md:gap-5">
+        <section className=" grid grid-cols-1 grid-rows-2  sm:grid-rows-2 md:grid-rows-1 md:grid-cols-2 gap-5 min-[420px]:gap-3 sm:gap-4 md:gap-5  xl:!h-[350px]" >
           <Metrics metrics={data?.metrics}></Metrics>
 
           <div className="w-full flex flex-col bg-white py-5 gap-6 rounded-xl h-full">
+            <div className="w-full flex flex-col gap-3 h-1/6">
+              <div className="flex flex-col gap-3 w-full">
+                
             <div className="flex px-8 justify-between items-center w-full">
               <span>Activity</span>
-              <div className="w-1/3">
-                <SelectTimeFrame></SelectTimeFrame>
+              <div className="w-1/6 flex justify-end">
+                {/* <SelectTimeFrame></SelectTimeFrame> */}
+                <Select></Select>
               </div>
             </div>
-            <div className="sm:w-full md:h-full md:w-full  px-3 flex justify-center items-center flex-1">
+              <div className="w-full px-8">
+                <hr className="bg-gray-200"></hr>
+              </div>
+              </div>
+            </div>
+            <div className="sm:h-5/6 sm:w-full md:h-full md:w-full  px-3 flex justify-center items-center flex-1">
               <Barchart data={data.activity.monthly}></Barchart>
             </div>
           </div>

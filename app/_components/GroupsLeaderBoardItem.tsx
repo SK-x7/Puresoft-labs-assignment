@@ -8,19 +8,19 @@ function GroupsLeaderBoardItem({
   return (
     <div className="flex w-full justify-between">
       <div className="flex gap-3">
-        <div className="flex flex-col text-xs">
-          <span className="font-semibold text-black capitalize">
+        <div className="flex flex-col">
+          <span className="font-semibold text-black capitalize text-sm">
             {leaderboardItem?.group_name}
           </span>
-          <span className="text-gray-500 capitalize">
+          <span className="text-gray-500 capitalize text-xs">
             {leaderboardItem.points_per_user} Points -{" "}
             {leaderboardItem.accuracy_percentage}% Correct
           </span>
         </div>
       </div>
 
-      <div className="flex justify-center items-center gap-3 text-sm">
-        <span>
+      <div className="flex justify-center items-center gap-1 sm:gap-3 text-sm">
+        <span className="font-bold">
           {leaderboardItem?.accuracy_percentage -
             leaderboardItem?.previous_accuracy_percentage}
         </span>
@@ -29,8 +29,8 @@ function GroupsLeaderBoardItem({
         0 ? (
           <span>
             <svg
-              width="12"
-              height="12"
+              width="14"
+              height="14"
               viewBox="0 0 12 12"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -44,8 +44,8 @@ function GroupsLeaderBoardItem({
         ) : (
           <span>
             <svg
-              width="12"
-              height="12"
+              width="14"
+              height="14"
               viewBox="0 0 12 12"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

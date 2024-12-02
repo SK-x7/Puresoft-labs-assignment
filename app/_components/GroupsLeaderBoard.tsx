@@ -13,8 +13,8 @@ function GroupsLeaderBoard({
   leaderboard: GroupLeaderboardProps[];
 }) {
   return (
-    <div className="w-full bg-white p-5 rounded-3xl flex flex-col gap-6">
-      <h1 className="text-sm text-gray-700">Groups Leaderboard</h1>
+    <div className="w-full bg-white p-5 rounded-3xl flex flex-col gap-4">
+      <h1 className=" text-gray-700">Groups Leaderboard</h1>
       <div className="w-full flex flex-col gap-5">
         {leaderboard &&
           leaderboard.map((item) => (

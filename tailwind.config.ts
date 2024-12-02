@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+	
     darkMode: ["class"],
     content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -61,6 +62,10 @@ const config: Config = {
   				ring: 'hsl(var(--sidebar-ring))'
   			}
   		},
+		  backgroundImage: {
+			'green-gradient': 'linear-gradient(270deg, #2FEA9B 15.5%, #7FDD53 85.5%)',
+			'orange-gradient': 'linear-gradient(143.13deg, #FFBF1A 5.36%, #FF4080 94.64%)'
+		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
