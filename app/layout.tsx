@@ -1,4 +1,4 @@
-import { SidebarProvider } from "@/components/ui/sidebar";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import localFont from "next/font/local";
 import "./globals.css";
 import { AppSidebar } from "./_components/AppSidebar";
@@ -42,7 +42,10 @@ export default function RootLayout({
           }
         >
           <AppSidebar></AppSidebar>
+          <>
+          <SidebarTrigger></SidebarTrigger>
           <main className="w-full px-5 !bg-gray-200/50 !h-full ">{children}</main>
+          </>
         </SidebarProvider>
       </body>
     </html>

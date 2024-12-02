@@ -1,4 +1,3 @@
-import { SidebarTrigger } from "@/components/ui/sidebar";
 import Barchart from "../_components/Barchart";
 import GroupsLeaderBoard from "../_components/GroupsLeaderBoard";
 import Header from "../_components/Header";
@@ -21,7 +20,6 @@ async function page() {
 
   return (
 <>
-      <SidebarTrigger></SidebarTrigger>
     
     
       <Header></Header>
