@@ -118,7 +118,7 @@ export function AppSidebar() {
             <SidebarMenu className="flex flex-col gap-3">
               {items2.map((item) => (
                 <SidebarMenuItem key={item.title} className="px-5">
-                  <SidebarMenuButton asChild className={`font-normal rounded-lg text-base py-5 hover:bg-blue-500 hover:text-white ${path===item.url?"text-blue-600 bg-blue-200/50":''}`}>
+                  <SidebarMenuButton asChild className={`font-normal rounded-lg text-base py-5 hover:bg-blue-500 hover:text-white ${path===item.url?"text-blue-600 bg-blue-200/50":''}`} onClick={toggleSidebar}>
                     <Link href={item.url} className="gap-4">
                       <item.icon size={36}/>
                       <span>{item.title}</span>
