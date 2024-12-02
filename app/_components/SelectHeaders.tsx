@@ -4,7 +4,6 @@ import SelectTimeFrame from "./SelectTimeFrame";
 import SelectPeople from "./SelectPeople";
 import { GroupLeaderboardProps } from "./GroupsLeaderBoard";
 import { LeaderboardProps } from "./UserLeaderBoard";
-import { useSidebar } from "@/components/ui/sidebar";
 import { Menu } from "lucide-react";
 import { useIsMobile2 } from "@/hooks/use-mobile2";
 
