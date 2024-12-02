@@ -5,7 +5,7 @@ import {
   Select,
   SelectContent,
   SelectTrigger,
-  SelectValue,
+  SelectValue
 } from "@/components/ui/select";
 
 import { Label } from "@/components/ui/label";
@@ -31,10 +31,20 @@ function SelectPeople({
     <div className="w-full">
       <Select>
         <SelectTrigger className="!w-full bg-white">
-          <SelectValue placeholder="People" />
+          <SelectValue placeholder={(!!selectedGroup&&!!selectedUser)?"Multiple Selected":selectedGroup||selectedUser||"People"}></SelectValue>
         </SelectTrigger>
         <SelectContent className="w-full">
           <div className="flex flex-col gap-3 px-4 py-2 divide-y-2 text-xs">
+            {
+              <div>
+                <h1 className="text-base text-gray-600">People :  
+                  <span className="text-black ml-1 font-semibold"> 
+                    
+                  {(!!selectedGroup&&!!selectedUser)?"Multiple Selected": selectedGroup|| selectedUser||"All"}
+                  </span>
+                  </h1>
+              </div>
+            }
             {(selectedGroup || selectedUser) && (
               <div className="flex gap-4">
                 {selectedGroup && (
@@ -61,7 +71,7 @@ function SelectPeople({
                 )}
               </div>
             )}
-            <div className="w-full flex justify-start items-center gap-[2px]">
+            <div className="w-full flex justify-start items-center gap-[2px] pt-2">
               <Search size={20} className="text-gray-500"></Search>
               <input  placeholder="Search..." className=" w-5/6 text-[16px] px-2 py-[2px] text-gray-500"/>
             </div>

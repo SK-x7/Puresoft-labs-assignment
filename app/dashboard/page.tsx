@@ -23,8 +23,9 @@ async function page() {
     
     
       <Header></Header>
-      <main className=" flex flex-col gap-4 flex-1 pt-5">
-        <section className="grid grid-cols-3 w-full justify-between gap-4">
+      <main className=" flex flex-col sm:gap-4 flex-1 pt-5">
+        {/* <section className="grid grid-cols-3 justify-between gap-2 min-[420px]:gap-4"> */}
+        <section className="w-full">
           <SelectHeaders
             groups_leaderboard={data?.groups_leaderboard}
             user_leaderboard={data?.user_leaderboard}
