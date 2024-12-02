@@ -1,6 +1,6 @@
 "use client";
 import React, { PureComponent } from "react";
-import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "recharts";
+import { Bar, BarChart, RectangleProps, ResponsiveContainer, XAxis, YAxis } from "recharts";
 
 export interface MonthObj {
   month: string;
@@ -21,7 +21,7 @@ export default class Example extends PureComponent<BarChartData> {
       v: 800 - item.value, // Example logic to compute 'v'. Adjust as needed.
     }));
 
-    const CustomBarShape = (props: any) => {
+    const CustomBarShape = (props:RectangleProps) => {
       const { x, y, width, height, fill } = props;
       return (
         <rect

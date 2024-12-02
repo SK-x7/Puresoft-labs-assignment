@@ -1,12 +1,10 @@
 import { SidebarTrigger } from "@/components/ui/sidebar";
-import { useIsMobile } from "@/hooks/use-mobile";
 import Barchart from "../_components/Barchart";
 import GroupsLeaderBoard from "../_components/GroupsLeaderBoard";
 import Header from "../_components/Header";
 import Metrics from "../_components/Metrics";
 import Select from "../_components/Select";
 import SelectHeaders from "../_components/SelectHeaders";
-import SelectTimeFrame from "../_components/SelectTimeFrame";
 import Topics, { topicProps } from "../_components/Topics";
 import UserLeaderBoard from "../_components/UserLeaderBoard";
 import { getData } from "../_lib/actions";
