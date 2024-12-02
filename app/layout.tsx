@@ -37,7 +37,7 @@ export default function RootLayout({
           style={
             {
               "--sidebar-width": "15rem",
-              "--sidebar-width-mobile": "12rem",
+              "--sidebar-width-mobile": "8rem",
             } as React.CSSProperties
           }
         >

@@ -22,7 +22,7 @@ function TopicItem({
       </div>
 
       <div className="flex-1 flex flex-col">
-        <span className="text-sm md:text-base">{topic?.name}</span>
+        <span className=" md:text-base">{topic?.name}</span>
         <div className="flex justify-between items-center  !w-full">
           {topicName === "weakest" ? (
             <div className="w-3/4 sm:w-4/5 lg:w-3/4">
@@ -39,7 +39,7 @@ function TopicItem({
               ></ProgressGreen>
             </div>
           )}
-          <span className="  capitalize text-sm w-2/5 lg:w-1/4 flex justify-end">
+          <span className="  capitalize !text-[10px] min-[420px]:!text-sm w-2/5 lg:w-1/4 flex justify-end text-end">
             {topic?.correct_percentage}% correct
           </span>
         </div>
