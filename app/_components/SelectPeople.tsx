@@ -46,7 +46,7 @@ function SelectPeople({
               </div>
             }
             {(selectedGroup || selectedUser) && (
-              <div className="flex gap-4">
+              <div className="flex gap-4 pt-3">
                 {selectedGroup && (
                   <span className="bg-gray-100 py-1 px-3 rounded-2xl flex justify-center items-center gap-1">
                     {selectedGroup}{" "}
