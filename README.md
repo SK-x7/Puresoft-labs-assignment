@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# About the Project
+
+This project was completed as part of the assignment provided by [PureSoft Labs OÜ]. The requirements for this task were as follows:
+
+- Task Objective:
+To develop a responsive dashboard UI using Next.js v14.x App Router and TypeScript, based on a Figma design provided by the company.
+- Key Instructions:
+The app had to be mobile-responsive (no mobile design was provided, this was to test the frontend skills), with data dynamically fetched from a provided JSON file (no hardcoding allowed). A "Download" button was required to POST the api_secret to an API and download the Base64 image response.
+- Ground Rule : The use of AI or assistance from others was strictly prohibited, and the app had to be hosted on Vercel.
+
+
+## Features
+
+- **Modern Design**: Built with Tailwind CSS for a clean and responsive design.
+- **Dynamic Routing**: Powered by Next.js, providing seamless client- and server-side rendering.
+- **Base64 Image Preview**: Displays and allows downloading of images encoded in Base64 format.
+- **Sidebar Navigation**: A collapsible sidebar menu for easy navigation.
+- **TypeScript Support**: Ensures type safety and better developer experience.
+
+---
+
+## Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org/)  
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)  
+- **Language**: [TypeScript](https://www.typescriptlang.org/docs/)  
+- **Icons**: [Lucide React](https://lucide.dev/)  
+
+---
+
+## Mobile View
+<img src="https://github.com/user-attachments/assets/dd52ebd2-0d33-4732-b443-f347cc753665" alt="Mobile view 1" style="width:auto; height:500px;">
+<img src="https://github.com/user-attachments/assets/b6817fb1-56c2-49fc-9787-a8a5f1e4d6ce" alt="Mobile view 2" style="width:auto; height:500px;">
+
+## Desktop View
+<img src="https://github.com/user-attachments/assets/6bbee455-8276-41f8-b452-67d0982989f0" alt="Desktop view 1" style="width:auto; height:400px; object-fit:cover;">
+<img src="https://github.com/user-attachments/assets/f6d2af90-d74d-4130-9616-05e4eaf47f73" alt="Desktop view 1" style="width:auto; height:400px; object-fit:cover;">
+
+---
 
 ## Getting Started
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Make sure you have the following installed:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [Node.js](https://nodejs.org/) (v16 or higher)
+- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### How to run locally?
 
-## Learn More
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+   cd your-repo
 
-To learn more about Next.js, take a look at the following resources:
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
